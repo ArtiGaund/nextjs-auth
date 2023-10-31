@@ -15,11 +15,11 @@ export async function POST(request: NextRequest) {
         // check if user exist
         const user = await User.findOne({ email })
         if(!user){
-            return NextResponse.json({ error: "User does not exist"}, { status: 4000})
+            return NextResponse.json({ error: "User does not exist"}, { status: 400})
         }
         await sendEmail({ email, emailType: "RESET", userId: user._id});
         return NextResponse.json({
-            message: "Verification mail has been sended to you email successfully",
+            message: "Verification mail has been sended to your email successfully",
             success: true,
             user,
         })

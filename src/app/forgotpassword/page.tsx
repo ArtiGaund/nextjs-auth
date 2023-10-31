@@ -18,7 +18,7 @@ export default function ForgotPasswordPage(){
             setLoading(true)
             const response = await axios.post("/api/users/forgotpassword", user)
             console.log("Verification link has been send successfully. ")
-            router.push("/verifyforgotpasswordtoken")
+            router.push("/profile")
         } catch (error: any) {
             setError(true);
             console.log("Error in onForgotPassword ",error.message);

@@ -25,7 +25,7 @@ export default function ForgotPasswordDetailPage(){
         try {
             setLoading(true)
             if(user.password === user.confirm_password){
-                const response = await axios.post('api/users/verifyforgotpasswordtoken', user)
+                const response = await axios.post('/api/users/verifyforgotpasswordtoken', user)
                 // setVerified(true);
                 console.log("Password changed successfully.")
                 router.push("/profile")
