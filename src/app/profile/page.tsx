@@ -47,6 +47,8 @@ export default function ProfilePage(){
             onClick={getUserDetails}
             className="bg-purple-900 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-4"
             >User Details</button>
+            <button className="bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4"
+            onClick={() => router.push("/forgotpassword")}>Forgot Password</button>
        </div>
     )
 }
